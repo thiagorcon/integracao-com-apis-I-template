@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AddUsuario from "./Componentes/AddUsuario/AddUsuario";
+import Usuario from "./Componentes/Usuario/Usuario";
 
 const usuariosLocal = [
   {
@@ -10,21 +12,23 @@ const usuariosLocal = [
     name: "Paulinha"
   },
   {
-    id: 1,
+    id: 3,
     name: "Marcelo"
   },
   {
-    id: 1,
+    id: 4,
     name: "Rodrigo"
   },
 ]
+
 function App() {
   const [usuarios, setUsuarios] = useState(usuariosLocal)
   return (
     <>
       <p>Para esta aula usaremos a <a href="https://documenter.getpostman.com/view/7549981/SzfCT5G2#intro" target="_blank" rel="noreferrer">API Labenusers</a></p>
+      <AddUsuario />
       {usuarios.map((usuario) => {
-        return <p key={usuario.id}>{usuario.name}</p>
+        return <Usuario key={usuario.id} usuario={usuario} />
       })}
     </>
   )
