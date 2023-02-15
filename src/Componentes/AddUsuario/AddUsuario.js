@@ -6,7 +6,7 @@ function AddUsuario(props) {
 
   return (
     <>
-      <p>Adicionar novo usuario</p>
+      <h3>Adicionar novo usuario</h3>
       <input
         placeholder={"nome"}
         value={nome}
