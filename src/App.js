@@ -27,6 +27,7 @@ function App() {
     <>
       <p>Para esta aula usaremos a <a href="https://documenter.getpostman.com/view/7549981/SzfCT5G2#intro" target="_blank" rel="noreferrer">API Labenusers</a></p>
       <AddUsuario />
+      <hr/>
       {usuarios.map((usuario) => {
         return <Usuario key={usuario.id} usuario={usuario} />
       })}
