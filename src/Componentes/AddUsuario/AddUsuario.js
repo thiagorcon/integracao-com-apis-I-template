@@ -3,6 +3,10 @@ import React, { useState } from "react";
 function AddUsuario(props) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
+ 
+  
+
+  
 
   return (
     <>
@@ -22,7 +26,7 @@ function AddUsuario(props) {
           setEmail(e.target.value);
         }}
       />
-      <button>Enviar</button>
+      <button onClick={()=> props.cadastrarUsuario(nome,email)}>Enviar</button>
     </>
   );
 }
